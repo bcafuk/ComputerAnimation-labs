@@ -8,7 +8,7 @@ Building upon the undergraduate-level [Interactive Computer Graphics course](htt
 it introduces concepts such as splines, forward and inverse kinematics, particle systems, and collision detection.
 
 For the course, students are expected to complete three laboratory assignments:
-1. following a path (B-splines),
+1. [following a path (B-splines)](lab1),
 2. particle systems, and
 3. an assignment with a free choice of topic.
 
