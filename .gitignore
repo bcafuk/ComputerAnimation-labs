@@ -1,0 +1,10 @@
+### NPM packages ###
+node_modules/
+
+### Compiled files ###
+/lab1/dist/
+/lab2/dist/
+/lab3/dist/
+
+### IDE configuration ###
+/.idea/
