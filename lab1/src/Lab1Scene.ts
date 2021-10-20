@@ -76,7 +76,7 @@ export default class Lab1Scene extends Scene {
 
     /*
      * Using `animatedObject.lookAt(tangentTarget);` would be better here.
-     * However, this way of setting the rotation is required by the lab assigmnent.
+     * However, this way of setting the rotation is required by the lab assignment.
      */
     const tangent = this.path.getTangent(t);
     const globalZ = new Vector3(0, 0, 1);
