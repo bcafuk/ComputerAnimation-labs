@@ -9,7 +9,7 @@ it introduces concepts such as splines, forward and inverse kinematics, particle
 
 For the course, students are expected to complete three laboratory assignments:
 1. [following a path (B-splines)](lab1),
-2. particle systems, and
+2. [particle systems](lab2), and
 3. an assignment with a free choice of topic.
 
 The original Croatian text of these assignments is available on [the course's pages](http://www.zemris.fer.hr/predmeti/ra/laboratorijske_vjezbe.html).
