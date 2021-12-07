@@ -26,7 +26,7 @@ const config = {
         enforce: 'pre',
       },
       {
-        test: /\.obj$/i,
+        test: /\.png$/i,
         loader: 'file-loader',
         options: {
           name: '[path][name].[ext]',
