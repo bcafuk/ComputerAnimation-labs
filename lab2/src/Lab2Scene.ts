@@ -11,6 +11,7 @@ export default class Lab2Scene extends Scene {
 
   private readonly positions: Vector3[] = [];
   private readonly velocities: Vector3[] = [];
+  private readonly sizes: number[] = [];
   private readonly ages: number[] = [];
 
   private readonly spawnRate: number;
@@ -58,7 +59,7 @@ export default class Lab2Scene extends Scene {
 
       const lifetimeFraction = this.ages[i] / Lab2Scene.particleLifetime;
 
-      const scale = 0.25 - lifetimeFraction * 0.25;
+      const scale = this.sizes[i] * (1 - lifetimeFraction) ** 0.5;
 
       const matrix = new Matrix4();
       matrix.lookAt(this.positions[i], camera.position, this.up);
@@ -68,8 +69,8 @@ export default class Lab2Scene extends Scene {
       this.particles.setMatrixAt(i, matrix);
 
       const color = new Color(
-        0.6 + (lifetimeFraction ** 0.3) * 0.4,
-        0.8 + (lifetimeFraction ** 0.3) * 0.2,
+        0.6 + (lifetimeFraction ** 0.6) * 0.4,
+        0.8 + (lifetimeFraction ** 0.6) * 0.2,
         1.0,
       );
       this.particles.setColorAt(i, color);
@@ -101,5 +102,7 @@ export default class Lab2Scene extends Scene {
 
     this.positions[index].applyAxisAngle(Lab2Scene.rotationAxis, nozzleAngle);
     this.velocities[index].applyAxisAngle(Lab2Scene.rotationAxis, nozzleAngle);
+
+    this.sizes[index] = 0.1 + Math.random() * 0.15;
   }
 }
