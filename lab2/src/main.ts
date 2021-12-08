@@ -4,6 +4,7 @@ import Lab2Scene from './Lab2Scene';
 
 import dropletTexture from '../assets/textures/water.png';
 
+const maxDt = 1 / 20;
 const maxDroplets = 8192;
 
 const planeGeometry = new PlaneBufferGeometry();
@@ -32,7 +33,7 @@ const render = (time: DOMHighResTimeStamp) => {
   if (lastTime === null)
     lastTime = time;
 
-  const dt = (time - lastTime) / 1000;
+  const dt = Math.min((time - lastTime) / 1000, maxDt);
   lastTime = time;
 
   scene.update(dt, renderer.getCamera());

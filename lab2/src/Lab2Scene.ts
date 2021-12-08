@@ -42,20 +42,20 @@ export default class Lab2Scene extends Scene {
     for (let i = oldParticleCount; i < this.particles.count; i++) {
       this.positions[i] = new Vector3();
       this.velocities[i] = new Vector3();
-      this.ages[i] = 0;
 
       this.initializeParticle(i);
     }
 
     for (let i = 0; i < this.particles.count; i++) {
       this.velocities[i].addScaledVector(Lab2Scene.gravity, dt);
+
+      this.positions[i].addScaledVector(Lab2Scene.gravity, 0.5 * dt ** 2);
       this.positions[i].addScaledVector(this.velocities[i], dt);
+
       this.ages[i] += dt;
 
-      if (this.ages[i] > Lab2Scene.particleLifetime) {
-        this.ages[i] %= Lab2Scene.particleLifetime;
+      if (this.ages[i] > Lab2Scene.particleLifetime)
         this.initializeParticle(i);
-      }
 
       const lifetimeFraction = this.ages[i] / Lab2Scene.particleLifetime;
 
@@ -104,5 +104,7 @@ export default class Lab2Scene extends Scene {
     this.velocities[index].applyAxisAngle(Lab2Scene.rotationAxis, nozzleAngle);
 
     this.sizes[index] = 0.1 + Math.random() * 0.15;
+
+    this.ages[index] = 0;
   }
 }
