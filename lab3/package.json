@@ -1,0 +1,40 @@
+{
+  "name": "racing-game",
+  "version": "0.1.0",
+  "description": "A racing video game in the style of Sega's iconic Out Run",
+  "scripts": {
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
+    "watch:dev": "webpack --mode development --watch",
+    "watch:prod": "webpack --mode production --watch",
+    "check-types": "tsc --noEmit --p tsconfig.json",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "racing",
+    "arcade",
+    "video game",
+    "game",
+    "graphics"
+  ],
+  "author": "Borna Cafuk",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/webpack-env": "^1.16.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.1",
+    "eslint-plugin-import": "^2.24.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "source-map-loader": "^3.0.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^3.9.0",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
+  }
+}
