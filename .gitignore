@@ -6,5 +6,19 @@ node_modules/
 /lab2/dist/
 /lab3/dist/
 
+# LaTeX
+*.aux
+*.lof
+*.log
+*.out
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.bbl
+*.blg
+*.xmpi
+*.nav
+*.snm
+
 ### IDE configuration ###
 /.idea/
