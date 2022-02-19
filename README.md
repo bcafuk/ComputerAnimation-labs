@@ -1,6 +1,6 @@
 # Computer Animation laboratory assignments
 
-This repository contains my solution to the first laboratory exercise for the
+This repository contains my solutions to laboratory exercises for the
 [Computer Animation course](https://www.fer.unizg.hr/en/course/comani_a) at the Faculty of Electrical Engineering and Computing at the University of Zagreb, Croatia.
 
 Computer Animation is a graduate-level course.
